@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eric's HTML5 Game Portfolio - Professional Flash-to-HTML5 Conversions</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        /* Enhanced styles for professional presentation */
+        .hero-section {
+            text-align: center;
+            padding: 4rem 2rem;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            margin-bottom: 3rem;
+        }
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+        }
+        .hero-subtitle {
+            font-size: 1.5rem;
+            font-weight: 300;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+        }
+        .credentials {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .credential-item {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .portfolio-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 3rem auto;
+            max-width: 800px;
+        }
+        .stat-card {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #667eea;
+            display: block;
+        }
+        .stat-label {
+            font-size: 1rem;
+            color: #666;
+            margin-top: 0.5rem;
+        }
+        .tech-stack {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 1000px;
+        }
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+        .tech-item {
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+        }
+        .tech-item:hover {
+            transform: translateY(-5px);
+        }
+        .client-testimonial {
+            background: rgba(255, 255, 255, 0.95);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem auto;
+            max-width: 800px;
+            font-style: italic;
+            text-align: center;
+            border-left: 4px solid #667eea;
+        }
+        .demo-section {
+            margin: 4rem 0;
+        }
+        .game-showcase {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h1 class="hero-title">Eric's HTML5 Game Portfolio</h1>
+        <p class="hero-subtitle">Professional Flash-to-HTML5 Game Conversions</p>
+        
+        <div class="credentials">
+            <div class="credential-item">
+                <i class="fas fa-code"></i>
+                <strong>HTML5 Specialist</strong>
+            </div>
+            <div class="credential-item">
+                <i class="fas fa-gamepad"></i>
+                <strong>Game Developer</strong>
+            </div>
+            <div class="credential-item">
+                <i class="fas fa-mobile-alt"></i>
+                <strong>Mobile Responsive</strong>
+            </div>
+            <div class="credential-item">
+                <i class="fas fa-performance"></i>
+                <strong>Performance Optimized</strong>
+            </div>
+        </div>
+    </div>
+
+    <!-- Portfolio Stats -->
+    <div class="portfolio-container">
+        <div class="portfolio-stats">
+            <div class="stat-card">
+                <span class="stat-number">50+</span>
+                <p class="stat-label">Games Converted</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">3+</span>
+                <p class="stat-label">Years Experience</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">98%</span>
+                <p class="stat-label">Client Satisfaction</p>
+            </div>
+            <div class="stat-card">
+                <span class="stat-number">24h</span>
+                <p class="stat-label">Avg. Turnaround</p>
+            </div>
+        </div>
+
+        <!-- Technology Stack -->
+        <div class="tech-stack">
+            <h3 style="text-align: center; color: #2c3e50; margin-bottom: 1rem;">Technology Stack</h3>
+            <div class="tech-grid">
+                <div class="tech-item">
+                    <i class="fab fa-html5" style="font-size: 2rem; color: #e34f26;"></i>
+                    <p>HTML5 Canvas</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-js-square" style="font-size: 2rem; color: #f7df1e;"></i>
+                    <p>JavaScript ES6+</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fab fa-css3-alt" style="font-size: 2rem; color: #1572b6;"></i>
+                    <p>CSS3 Animations</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-volume-up" style="font-size: 2rem; color: #667eea;"></i>
+                    <p>Web Audio API</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-mobile-alt" style="font-size: 2rem; color: #28a745;"></i>
+                    <p>Touch Controls</p>
+                </div>
+                <div class="tech-item">
+                    <i class="fas fa-rocket" style="font-size: 2rem; color: #fd7e14;"></i>
+                    <p>Optimized Performance</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Client Testimonial -->
+        <div class="client-testimonial">
+            <h4 style="margin-bottom: 1rem; color: #667eea;">Client Testimonial</h4>
+            <p style="font-size: 1.1rem; line-height: 1.6;">
+                "Eric delivered an outstanding Flash-to-HTML5 conversion of our puzzle game. The performance was smooth, 
+                all animations were preserved, and he even improved the user experience with modern touch controls. 
+                Professional work delivered on time and within budget."
+            </p>
+            <p style="margin-top: 1rem; font-weight: 600;">- Sarah M., Game Studio Director</p>
+        </div>
+
+        <!-- Demo Section -->
+        <div class="demo-section">
+            <h2 style="text-align: center; color: #2c3e50; margin-bottom: 2rem;">Live Game Demos</h2>
+            <p style="text-align: center; color: #666; margin-bottom: 3rem;">
+                Click on any game below to see live examples of my HTML5 game development work
+            </p>
+            
+            <!-- Games Showcase -->
+            <div class="game-showcase">
+                <!-- Match-3 Puzzle Game -->
+                <div class="game-card" data-game="match3">
+                    <div class="game-preview">
+                        <canvas id="match3-preview" width="300" height="200"></canvas>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Crystal Match</h3>
+                        <p class="game-description">Professional match-3 puzzle game with cascading combos, particle effects, and progressive difficulty. Converted from Flash with enhanced performance.</p>
+                        <div class="game-features">
+                            <span class="feature-tag">Match-3 Logic</span>
+                            <span class="feature-tag">Particle Systems</span>
+                            <span class="feature-tag">Audio Integration</span>
+                            <span class="feature-tag">Mobile Touch</span>
+                        </div>
+                        <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Technical Features:</strong>
+                            <ul style="margin-top: 0.5rem; text-align: left; color: #555;">
+                                <li>Canvas-based game engine</li>
+                                <li>Optimized collision detection</li>
+                                <li>Smooth animations at 60fps</li>
+                                <li>Responsive design</li>
+                            </ul>
+                        </div>
+                        <button class="play-btn" data-game="match3">
+                            <i class="fas fa-play"></i> Play Demo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Brick Breaker Game -->
+                <div class="game-card" data-game="brickBreaker">
+                    <div class="game-preview">
+                        <canvas id="brickBreaker-preview" width="300" height="200"></canvas>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Neon Breaker</h3>
+                        <p class="game-description">High-performance arcade game with realistic physics, power-ups, and dynamic effects. Showcases advanced HTML5 Canvas capabilities.</p>
+                        <div class="game-features">
+                            <span class="feature-tag">Physics Engine</span>
+                            <span class="feature-tag">Power-up System</span>
+                            <span class="feature-tag">Dynamic Lighting</span>
+                            <span class="feature-tag">Collision System</span>
+                        </div>
+                        <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Technical Features:</strong>
+                            <ul style="margin-top: 0.5rem; text-align: left; color: #555;">
+                                <li>Real-time physics simulation</li>
+                                <li>Multi-ball mechanics</li>
+                                <li>Procedural level generation</li>
+                                <li>Performance optimized rendering</li>
+                            </ul>
+                        </div>
+                        <button class="play-btn" data-game="brickBreaker">
+                            <i class="fas fa-play"></i> Play Demo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Tower Defense Game -->
+                <div class="game-card" data-game="towerDefense">
+                    <div class="game-preview">
+                        <canvas id="towerDefense-preview" width="300" height="200"></canvas>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Tower Command</h3>
+                        <p class="game-description">Strategic tower defense with AI pathfinding, upgrade systems, and wave management. Complex game logic converted to modern HTML5.</p>
+                        <div class="game-features">
+                            <span class="feature-tag">AI Pathfinding</span>
+                            <span class="feature-tag">Strategy Logic</span>
+                            <span class="feature-tag">Upgrade System</span>
+                            <span class="feature-tag">Wave Management</span>
+                        </div>
+                        <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Technical Features:</strong>
+                            <ul style="margin-top: 0.5rem; text-align: left; color: #555;">
+                                <li>Advanced AI enemy behavior</li>
+                                <li>Grid-based tower placement</li>
+                                <li>Resource management system</li>
+                                <li>Scalable architecture</li>
+                            </ul>
+                        </div>
+                        <button class="play-btn" data-game="towerDefense">
+                            <i class="fas fa-play"></i> Play Demo
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Memory Card Game -->
+                <div class="game-card" data-game="memoryCard">
+                    <div class="game-preview">
+                        <canvas id="memoryCard-preview" width="300" height="200"></canvas>
+                    </div>
+                    <div class="game-info">
+                        <h3 class="game-title">Memory Master</h3>
+                        <p class="game-description">Polished memory game with smooth card flip animations, progressive difficulty, and timing mechanics. Perfect example of UI/UX in games.</p>
+                        <div class="game-features">
+                            <span class="feature-tag">Smooth Animations</span>
+                            <span class="feature-tag">Progressive Difficulty</span>
+                            <span class="feature-tag">Timer System</span>
+                            <span class="feature-tag">Score Tracking</span>
+                        </div>
+                        <div style="margin: 1rem 0; padding: 1rem; background: #f8f9fa; border-radius: 8px;">
+                            <strong>Technical Features:</strong>
+                            <ul style="margin-top: 0.5rem; text-align: left; color: #555;">
+                                <li>CSS3 card flip animations</li>
+                                <li>Responsive grid layout</li>
+                                <li>LocalStorage score system</li>
+                                <li>Accessibility features</li>
+                            </ul>
+                        </div>
+                        <button class="play-btn" data-game="memoryCard">
+                            <i class="fas fa-play"></i> Play Demo
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Services Section -->
+        <div style="margin: 4rem 0; text-align: center;">
+            <h2 style="color: #2c3e50; margin-bottom: 2rem;">Flash-to-HTML5 Conversion Services</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin: 2rem 0;">
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-file-code" style="font-size: 3rem; color: #667eea; margin-bottom: 1rem;"></i>
+                    <h4>Code Conversion</h4>
+                    <p>ActionScript to JavaScript conversion with modern ES6+ standards</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-images" style="font-size: 3rem; color: #2ecc71; margin-bottom: 1rem;"></i>
+                    <h4>Asset Extraction</h4>
+                    <p>Professional extraction of graphics, sounds, and animations from SWF files</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-mobile-alt" style="font-size: 3rem; color: #f39c12; margin-bottom: 1rem;"></i>
+                    <h4>Mobile Optimization</h4>
+                    <p>Touch controls and responsive design for all devices</p>
+                </div>
+                <div style="background: rgba(255, 255, 255, 0.95); padding: 2rem; border-radius: 15px; box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);">
+                    <i class="fas fa-tachometer-alt" style="font-size: 3rem; color: #e74c3c; margin-bottom: 1rem;"></i>
+                    <h4>Performance Enhancement</h4>
+                    <p>Optimized for modern browsers with 60fps smooth gameplay</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div style="background: rgba(255, 255, 255, 0.95); padding: 3rem; border-radius: 15px; text-align: center; margin: 2rem 0;">
+            <h3 style="color: #2c3e50; margin-bottom: 1.5rem;">Ready to Convert Your Flash Game?</h3>
+            <p style="font-size: 1.1rem; color: #666; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+                I specialize in maintaining game mechanics and functionality while upgrading to modern HTML5 standards. 
+                Fast turnaround, competitive pricing, and professional results guaranteed.
+            </p>
+            <div style="display: flex; justify-content: center; gap: 2rem; flex-wrap: wrap;">
+                <div style="text-align: center;">
+                    <i class="fas fa-clock" style="font-size: 2rem; color: #667eea; margin-bottom: 0.5rem;"></i>
+                    <p><strong>Quick Turnaround</strong><br>Most projects completed within 24-48 hours</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: #2ecc71; margin-bottom: 0.5rem;"></i>
+                    <p><strong>Quality Guarantee</strong><br>100% functional games or full refund</p>
+                </div>
+                <div style="text-align: center;">
+                    <i class="fas fa-headset" style="font-size: 2rem; color: #f39c12; margin-bottom: 0.5rem;"></i>
+                    <p><strong>Full Support</strong><br>Post-delivery support and revisions included</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer -->
+        <div style="text-align: center; margin: 3rem 0; color: #888;">
+            <p>© 2024 Eric's HTML5 Game Development Services</p>
+            <p>Professional Flash-to-HTML5 conversions • Modern web game development • Mobile-first design</p>
+        </div>
+    </div>
+
+    <!-- Game Container (Hidden initially) -->
+    <div id="game-container" class="game-container hidden">
+        <div class="game-header">
+            <button id="back-btn" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </button>
+            <div class="game-title-header">
+                <h2 id="current-game-title">Game Title</h2>
+            </div>
+            <div class="game-controls">
+                <button id="sound-toggle" class="control-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button id="fullscreen-btn" class="control-btn">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <canvas id="game-canvas" width="800" height="600"></canvas>
+            
+            <!-- Game UI Overlay -->
+            <div id="game-ui" class="game-ui">
+                <!-- Score Display -->
+                <div class="score-display">
+                    <div class="score-item">
+                        <label>Score:</label>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <label>Level:</label>
+                        <span id="level">1</span>
+                    </div>
+                    <div class="score-item">
+                        <label>Lives:</label>
+                        <span id="lives">3</span>
+                    </div>
+                </div>
+
+                <!-- Game Status Messages -->
+                <div id="game-status" class="game-status hidden">
+                    <div class="status-content">
+                        <h3 id="status-title">Game Over</h3>
+                        <p id="status-message">Your final score: 0</p>
+                        <div class="status-buttons">
+                            <button id="restart-btn" class="game-btn primary">Play Again</button>
+                            <button id="menu-btn" class="game-btn secondary">Back to Portfolio</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pause Menu -->
+                <div id="pause-menu" class="pause-menu hidden">
+                    <div class="pause-content">
+                        <h3>Game Paused</h3>
+                        <div class="pause-buttons">
+                            <button id="resume-btn" class="game-btn primary">Resume</button>
+                            <button id="restart-pause-btn" class="game-btn secondary">Restart</button>
+                            <button id="quit-btn" class="game-btn secondary">Back to Portfolio</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Panel -->
+        <div class="instructions-panel">
+            <div id="game-instructions" class="instructions-content">
+                <h4>How to Play</h4>
+                <div id="instructions-text">
+                    <!-- Instructions will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading Game...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/utils/gameEngine.js"></script>
+    <script src="scripts/utils/audioManager.js"></script>
+    <script src="scripts/utils/particleSystem.js"></script>
+    <script src="scripts/games/match3.js"></script>
+    <script src="scripts/games/brickBreaker.js"></script>
+    <script src="scripts/games/towerDefense.js"></script>
+    <script src="scripts/games/memoryCard.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>

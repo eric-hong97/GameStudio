@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5 Game Portfolio - Professional Game Development</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/games.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Main Portfolio Landing -->
+    <div id="portfolio" class="portfolio-container">
+        <header class="portfolio-header">
+            <h1 class="portfolio-title">HTML5 Game Portfolio</h1>
+            <p class="portfolio-subtitle">Professional Flash-to-HTML5 Game Development Showcase</p>
+        </header>
+        
+        <div class="games-grid">
+            <!-- Match-3 Puzzle Game -->
+            <div class="game-card" data-game="match3">
+                <div class="game-preview">
+                    <canvas id="match3-preview" width="200" height="200"></canvas>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">Crystal Match</h3>
+                    <p class="game-description">Match-3 puzzle game with cascading combos and special effects</p>
+                    <div class="game-features">
+                        <span class="feature-tag">Puzzle</span>
+                        <span class="feature-tag">Match-3</span>
+                        <span class="feature-tag">Combos</span>
+                    </div>
+                    <button class="play-btn" data-game="match3">
+                        <i class="fas fa-play"></i> Play Game
+                    </button>
+                </div>
+            </div>
+
+            <!-- Brick Breaker Arcade Game -->
+            <div class="game-card" data-game="brickBreaker">
+                <div class="game-preview">
+                    <canvas id="brickBreaker-preview" width="200" height="200"></canvas>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">Neon Breaker</h3>
+                    <p class="game-description">Fast-paced arcade game with physics and power-ups</p>
+                    <div class="game-features">
+                        <span class="feature-tag">Arcade</span>
+                        <span class="feature-tag">Physics</span>
+                        <span class="feature-tag">Power-ups</span>
+                    </div>
+                    <button class="play-btn" data-game="brickBreaker">
+                        <i class="fas fa-play"></i> Play Game
+                    </button>
+                </div>
+            </div>
+
+            <!-- Tower Defense -->
+            <div class="game-card" data-game="towerDefense">
+                <div class="game-preview">
+                    <canvas id="towerDefense-preview" width="200" height="200"></canvas>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">Tower Command</h3>
+                    <p class="game-description">Strategic tower defense with upgrades and waves</p>
+                    <div class="game-features">
+                        <span class="feature-tag">Strategy</span>
+                        <span class="feature-tag">Defense</span>
+                        <span class="feature-tag">Upgrades</span>
+                    </div>
+                    <button class="play-btn" data-game="towerDefense">
+                        <i class="fas fa-play"></i> Play Game
+                    </button>
+                </div>
+            </div>
+
+            <!-- Memory Card Game -->
+            <div class="game-card" data-game="memoryCard">
+                <div class="game-preview">
+                    <canvas id="memoryCard-preview" width="200" height="200"></canvas>
+                </div>
+                <div class="game-info">
+                    <h3 class="game-title">Memory Master</h3>
+                    <p class="game-description">Card matching game with smooth animations</p>
+                    <div class="game-features">
+                        <span class="feature-tag">Memory</span>
+                        <span class="feature-tag">Cards</span>
+                        <span class="feature-tag">Animation</span>
+                    </div>
+                    <button class="play-btn" data-game="memoryCard">
+                        <i class="fas fa-play"></i> Play Game
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <div class="portfolio-footer">
+            <p>Built with pure HTML5, CSS3, and JavaScript • Responsive Design • Professional Game Development</p>
+        </div>
+    </div>
+
+    <!-- Game Container -->
+    <div id="game-container" class="game-container hidden">
+        <div class="game-header">
+            <button id="back-btn" class="back-btn">
+                <i class="fas fa-arrow-left"></i> Back to Portfolio
+            </button>
+            <div class="game-title-header">
+                <h2 id="current-game-title">Game Title</h2>
+            </div>
+            <div class="game-controls">
+                <button id="sound-toggle" class="control-btn">
+                    <i class="fas fa-volume-up"></i>
+                </button>
+                <button id="fullscreen-btn" class="control-btn">
+                    <i class="fas fa-expand"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="game-content">
+            <canvas id="game-canvas" width="800" height="600"></canvas>
+            
+            <!-- Game UI Overlay -->
+            <div id="game-ui" class="game-ui">
+                <!-- Score Display -->
+                <div class="score-display">
+                    <div class="score-item">
+                        <label>Score:</label>
+                        <span id="score">0</span>
+                    </div>
+                    <div class="score-item">
+                        <label>Level:</label>
+                        <span id="level">1</span>
+                    </div>
+                    <div class="score-item">
+                        <label>Lives:</label>
+                        <span id="lives">3</span>
+                    </div>
+                </div>
+
+                <!-- Game Status Messages -->
+                <div id="game-status" class="game-status hidden">
+                    <div class="status-content">
+                        <h3 id="status-title">Game Over</h3>
+                        <p id="status-message">Your final score: 0</p>
+                        <div class="status-buttons">
+                            <button id="restart-btn" class="game-btn primary">Play Again</button>
+                            <button id="menu-btn" class="game-btn secondary">Main Menu</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pause Menu -->
+                <div id="pause-menu" class="pause-menu hidden">
+                    <div class="pause-content">
+                        <h3>Game Paused</h3>
+                        <div class="pause-buttons">
+                            <button id="resume-btn" class="game-btn primary">Resume</button>
+                            <button id="restart-pause-btn" class="game-btn secondary">Restart</button>
+                            <button id="quit-btn" class="game-btn secondary">Quit to Menu</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Instructions Panel -->
+        <div class="instructions-panel">
+            <div id="game-instructions" class="instructions-content">
+                <h4>How to Play</h4>
+                <div id="instructions-text">
+                    <!-- Instructions will be populated by JavaScript -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Screen -->
+    <div id="loading-screen" class="loading-screen hidden">
+        <div class="loading-content">
+            <div class="spinner"></div>
+            <p>Loading Game...</p>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="scripts/utils/gameEngine.js"></script>
+    <script src="scripts/utils/audioManager.js"></script>
+    <script src="scripts/utils/particleSystem.js"></script>
+    <script src="scripts/games/match3.js"></script>
+    <script src="scripts/games/brickBreaker.js"></script>
+    <script src="scripts/games/towerDefense.js"></script>
+    <script src="scripts/games/memoryCard.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
